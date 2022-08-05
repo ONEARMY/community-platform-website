@@ -396,10 +396,9 @@
   right: 0%;
   bottom: auto;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 5px 10px;
   float: right;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.75);
@@ -414,6 +413,11 @@
 }
 
 .logo {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
   width: auto;
   height: 60px;
   padding-top: 4px;
@@ -576,7 +580,13 @@
   font-size: 20px;
 }
 
+.menu-active {
+  float: none;
+}
+
 .menu-active.w--current {
+  position: relative;
+  float: none;
   color: #fff;
 }
 
@@ -651,11 +661,12 @@
 }
 
 .right-buttons {
-  position: absolute;
+  position: fixed;
   left: auto;
   top: 0%;
   right: 0%;
   bottom: auto;
+  display: block;
 }
 
 .manpower {
@@ -1664,6 +1675,17 @@
   line-height: 800px;
 }
 
+.nav-menu-2 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
 .codetext {
   line-height: 23px;
 }
@@ -1683,6 +1705,17 @@
   display: block;
   width: 100%;
   line-height: 0px;
+}
+
+.container-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .job-button {
@@ -1757,6 +1790,10 @@
   line-height: 12px;
 }
 
+.mobile-button {
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   .feature {
     padding-right: 20px;
@@ -1784,6 +1821,10 @@
     padding-right: 20px;
   }
 
+  .button {
+    margin-left: 0px;
+  }
+
   .button.mobile {
     display: block;
     margin-top: 30px;
@@ -1803,6 +1844,29 @@
   }
 
   .menu-active {
+    position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 17px;
   }
 
@@ -1880,7 +1944,25 @@
   }
 
   .nav-menu-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 30px;
+    padding-bottom: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: #4d9dee;
   }
 
@@ -1889,6 +1971,11 @@
   }
 
   .container-2 {
+    display: block;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     line-height: 20px;
   }
 
@@ -1899,6 +1986,38 @@
 
   .messagep {
     line-height: 19px;
+  }
+
+  .brand {
+    position: relative;
+  }
+
+  .mobile-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    align-self: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -1976,6 +2095,32 @@
     padding-left: 10px;
   }
 
+  .button {
+    position: relative;
+    right: auto;
+    display: block;
+    margin-left: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+  }
+
   .button.mobile {
     margin-left: 15px;
   }
@@ -2008,6 +2153,18 @@
   .feature-title {
     margin-right: 10px;
     margin-left: 10px;
+  }
+
+  .menu-active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .image-4 {
@@ -2060,6 +2217,10 @@
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .right-buttons {
+    display: none;
   }
 
   .manpower {
@@ -2178,6 +2339,22 @@
     padding-left: 20px;
   }
 
+  .nav-menu-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 30px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
   .paragraph-5 {
     text-align: center;
   }
@@ -2193,6 +2370,17 @@
 
   .messagep {
     font-size: 12px;
+  }
+
+  .mobile-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
